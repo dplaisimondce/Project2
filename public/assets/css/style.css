@@ -1,0 +1,57 @@
+body {
+	background-color: #eee!important;
+}
+
+.left-nav {
+	position: relative;
+	top: 0px;
+	width: 10%;
+	background-color: #eee;
+}
+
+
+.jumbotron {
+	background-color: #3b5998!important;
+	height: 160px;
+	color: blue;
+}
+
+.text-center {
+	margin-top: 0px;
+	color: white!important;
+}
+
+.form-group {
+	width: 40%;
+}
+
+.chirp {
+  padding: 10px;
+  margin: 10px;
+  background-color: #e8f9ff;
+}
+
+.cool-font {
+  font-size: 24px;
+  color: #1da1f2;
+}
+
+
+input,
+textarea {
+  margin: 20px;
+}
+
+.btn {
+  margin: 10px;
+  color: #1da1f2;
+  background-color: white;
+  border-color: #1da1f2;
+  border-style: solid;
+  border-width: 2px;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
