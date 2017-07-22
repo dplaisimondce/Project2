@@ -1,15 +1,26 @@
-'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Posts = sequelize.define('Posts', {
-    username: DataTypes.STRING,
-    user_posts: DataTypes.STRING
+    userName: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        len:[1,20]
+      }
+    },
+    userPosts:{
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        len:[1,255]
+      }
+    }
   }, {
-    underscored: true,
     classMethods: {
       associate: function(models) {
         // associations can be defined here
       }
     }
   });
+
   return Posts;
 };

@@ -1,13 +1,8 @@
 var db = require("../models")['Post'];
-var express = require("express");
 
-var router = express.Router();
 
-// routes for updating, creating, and deleting a user's post
-
-module.exports = function(app) {
-
-  // route to get posts
+module.exports = function (app){
+	 // route to get posts
   app.get("/api/posts/", function(req, res) {
     db.Post.findAll({})
     .then(function(dbPost) {
@@ -52,3 +47,6 @@ module.exports = function(app) {
     });
   });
 };
+};
+
+
