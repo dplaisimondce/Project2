@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "",
-    "database": "post-project-db",
+    "database": "post_project",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

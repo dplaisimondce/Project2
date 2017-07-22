@@ -1,29 +1,26 @@
+module.exports = function(sequelize, DataTypes) {
+  var Posts = sequelize.define('Posts', {
+    userName: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        len:[1,20]
+      }
+    },
+    userPosts:{
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        len:[1,255]
+      }
+    }
+  }, {
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
+      }
+    }
+  });
 
-var Sequelize = require("sequelize");
-
-var sequelize = require("../config/connection.js");
-
-module.exports = function(sequelize, dataTypes) {
-
-var post = sequelize.define("posts",  {
-  id: {
-    type: dataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true
-  },
-  username: {
-    type: dataTypes.STRING,
-    allowNull: false
-    validate: { len: [0,15] }
-  },
-  user_post: {
-    type: dataTypes.STRING,
-    allowNull:false
-    validate: { len: [0,255] }
-  }
-}, {
-  timestamps: true,
-  createdAt: "Date Listed"
-});
-return post;
+  return Posts;
 };
