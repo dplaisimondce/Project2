@@ -1,17 +1,24 @@
 module.exports = function(sequelize, DataTypes) {
-  var Posts = sequelize.define('Posts', {
-    userName: {
+  var Login = sequelize.define('userLogin', {
+    loginName: {
       type:DataTypes.STRING,
       allowNull: false,
       validate:{
         len:[1,20]
       }
     },
-    userPosts:{
-      type:DataTypes.TEXT,
+    loginPassword:{
+      type:DataTypes.STRING,
       allowNull:false,
       validate:{
-        len:[1,255]
+        len:[1,20]
+      }
+    },
+    userName:{
+      type:DataTypes.STRING,
+      allowNull:False,
+      validate:{
+        len:[3,15]
       }
     }
   }, {
@@ -23,5 +30,5 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  return Posts;
+  return Login;
 };
