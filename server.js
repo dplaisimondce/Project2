@@ -21,7 +21,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-require("./controllers/postcontrollers")(app);
+var routes = require("./controllers/postcontrollers")(app);
 
 app.listen(port);
 
