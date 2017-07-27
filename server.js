@@ -5,9 +5,11 @@ var passport   = require('passport')
 var session    = require('express-session')
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars')
+var db = require('./models')
 
 
-var port = process.env.PORT || 3000;
+
+var port = process.env.PORT || 8181;
 
 var app = express();
 
@@ -28,13 +30,9 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var routes = require("./controllers/postcontrollers")(app);
 
-app.listen(port);
+// app.listen(port);
 
-db.sequelize.sync({ force: true}).then(function){
-	app.listen(PORT, function(){
-		console.log("App listening on PORT: " + PORT);
-	});
-};
+
 
 
 
@@ -50,26 +48,7 @@ app.get('/', function(req, res) {
 });
  
  
-app.listen(3000, function(err) {
- 
-    if (!err)
-        console.log("Site is live");
-    else console.log(err)
- 
-});
-//syncing/ importing models
-var models = require("./models");
- 
-//Sync Database
-models.sequelize.sync().then(function() {
- 
-    console.log('database working')
- 
-}).catch(function(err) {
- 
-    console.log(err, "problem with database")
- 
-});
+
 
 // passport/express session middleware
  
@@ -89,4 +68,11 @@ app.engine('hbs', exphbs({
 var authRoute = require('./passport/routes/authroutes.js')(app,passport);
 
 //load passport strategies
-require('./config/passport.js')(passport, models.user);
+require('./config/passport.js')(passport, db.user);
+
+
+ db.sequelize.sync({}).then(function(){
+	app.listen(port, function(){
+		console.log("App listening on PORT: " + port);
+	});
+	 });
