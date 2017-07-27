@@ -1,3 +1,12 @@
+<div class='nav1'>
+    <nav class="navbar navbar-light">
+     <a class="navbar-brand" href="#">
+    FakeBook
+  </a>
+</nav>
+</div>
+
+<div id='container'>
 <div class='row'>
 <div class='col-sm-3'>
 <nav class="navbar navbar sidebar" role="navigation">
@@ -16,24 +25,8 @@
     <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-        <li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-        <li ><a href="#">Messages<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
-        <li ><a href="#">Pokes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-hand-right"></span></a></li>
-        </li>
-        <li><a href="#">Camera<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-camera"></span></a></li>
-        <li ><a href="#">Video<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-film"></span></a></li>
-        <li ><a href="#">Activity Log<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th-list"></span></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
-          <ul class="dropdown-menu forAnimate" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
+        <li ><a href="profile.html">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+        <li ><a href="#">Log out<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
         </li>
       </ul>
     </div>
@@ -41,23 +34,41 @@
 </nav>
 </div>
 
-<div class="main">
-<div class='col-sm-6'>
 <!-- Content Here -->
-<div class="form-group">
-    <textarea class="form-control" id="exampleTextarea" placeholder= 'Whats on your mind?' rows="3"></textarea>
-      <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
-  </div>
-</div>
-</div>
+ <div class="row">
+    
+    <div class="col-md-6">
+                <div class="widget-area no-padding blank">
+                <div class="status-upload">
+                  <form>
+                    <textarea placeholder="What are you doing right now?" ></textarea>
+                    <ul>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="glyphicon glyphicon-volume-up"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="glyphicon glyphicon-film"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Direct Messages"><i class="glyphicon glyphicon-envelope"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="glyphicon glyphicon-camera"></i></a></li>
+                    </ul>
+                    <button type="submit" method='post' action='post' class="btn btn-success"><i class="fa fa-share"></i> Post</button>
+                  </form>
+                </div><!-- Status Upload  -->
+              </div><!-- Widget Area -->
+            </div>
+        
+    </div>
 
 
-<div class='results-div'>
-<div class='col-sm-3'>
-  <h4></h4>
-</div>
-</div>
 
 <div class='find-friends'>
-  <h4>Find Friends</h4>
+<div class='col-sm-3'>
+  <div class="socialBar">
+      <a href="#" title="Facebook"><i class="ico FbIcon"><img src="http://i224.photobucket.com/albums/dd65/etaguile/Facebook_zpsjtffnhpc.png"></i></a>
+      <a href="#" title="Instagram"><i class="ico IgIcon"><img src="http://www.marknewtonband.com/wp-content/uploads/2016/09/adver-marknewtonband-1.png"></i></a>
+    </div>  
+</div>
+</div>
+</div>
+
+<div class='results-div'>
+</div>
+
 </div>

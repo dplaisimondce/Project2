@@ -12,7 +12,7 @@ body {
 }
 
 .navbar.sidebar {
-  background-color: #e9ebee
+  background-color: #e9ebee;
 }
 body,html{
       height: 100%;
@@ -166,13 +166,20 @@ body,html{
     padding-left: 15px;
   }
 
+textarea.form-control2 {
+  width: 820px;
+  margin: auto;
+  margin-left: 40px;
+}
+
 textarea.form-control {
-  width: 100%;
+  width: 300px;
 }
 
 .main {
   background-color: white;
-  width: 38%;
+  width: 33%;
+  height: 150px;
   border: solid;
   margin-left: 290px;
   margin-top: 20px;
@@ -190,8 +197,19 @@ textarea.form-control {
   display: block;
 }
 
+.form-group2 {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+#btn2 {
+  
+}
+
 .btn-success {
-  margin-top: 9px;
+  margin-top: 60px;
+  color: #e9ebee!important;
 }
 
 form.form-inline {
@@ -213,14 +231,8 @@ nav.sidebar.navbar {
 }
 
 .find-friends {
-  background-color: white;
-  width: 20%;
-  border: solid;
-  border-width: 1px;
-  float: right;
-    margin-right: 50px;
-    margin-top: 20px;
-    height: 190px;
+  
+    
 }
 
 h4 {
@@ -317,4 +329,263 @@ img{
     border-left: 1px solid #e9eaed;
   }
 
+body { /*JUST FOR TEST, YOU CAN REMOVE IT*/
+  background-color: #A6A6A6;
+}
+
+.socialBar { /*JUST FOR POSITIONING THE SOCIAL DIV: CENTERED RIGHT*/
+  position: fixed;
+  right: 0px; /*THIS WILL TAKE YOU A MARGIN FROM RIGHT*/
+  top: 50%; /*CENTER THE DIV, DO NOT EDIT*/
+  transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  -webkit-transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  -moz-transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  -o-transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  background-color: #e9ebee; /*WHATEVER COLOR THAT YOU WANT*/
+  height: 580px;
+  width: 17%;
+}
+.socialBar .ico {
+  display: block; /*VERTICAL POSITION*/
+  padding: 8px; /*DO NOT EDIT, MAINTAINS THE CORRECT SIZE FOR BACKGROUND COLOR*/
+}
+.socialBar:hover .ico {  /*JUST ANIMATION, YOU CAN REMOVE IT IF YOU WANT A FAST COLOR CHANGE*/
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.socialBar .FbIcon:hover { /*THIS MAKES A COLOR CHANGE*/
+  background-color: #3B5998;
+  margin-top: 25px;
+}
+.socialBar .IgIcon:hover {
+  background-color: #3B5998;
+}
+
+.socialBar .IgIcon {
+  height: 240px;
+  width: 240px;
+}
+
+body{ background: #fafafa;}
+.widget-area.blank {
+background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+-ms-box-shadow: none;
+-o-box-shadow: none;
+box-shadow: none;
+}
+body .no-padding {
+padding: 0;
+}
+.widget-area {
+background-color: #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-ms-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+float: left;
+margin-top: 30px;
+padding: 25px 30px;
+position: relative;
+width: 100%;
+}
+
+.status-upload {
+background: none repeat scroll 0 0 #f5f5f5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+float: left;
+width: 100%;
+}
+
+.status-upload form {
+float: left;
+width: 100%;
+}
+
+.status-upload form textarea {
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+-webkit-border-radius: 4px 4px 0 0;
+-moz-border-radius: 4px 4px 0 0;
+-ms-border-radius: 4px 4px 0 0;
+-o-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+color: #777777;
+float: left;
+font-family: Lato;
+font-size: 14px;
+height: 142px;
+letter-spacing: 0.3px;
+padding: 20px;
+width: 100%;
+resize:vertical;
+outline:none;
+border: 1px solid #F2F2F2;
+}
+
+.status-upload ul {
+float: left;
+list-style: none outside none;
+margin: 0;
+padding: 0 0 0 15px;
+width: auto;
+}
+.status-upload ul > li {
+float: left;
+}
+.status-upload ul > li > a {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #777777;
+float: left;
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+margin: 10px 0 10px 10px;
+text-align: center;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+width: 30px;
+cursor: pointer;
+}
+.status-upload ul > li > a:hover {
+background: none repeat scroll 0 0 #606060;
+color: #fff;
+}
+.status-upload form button {
+border: medium none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #fff;
+float: right;
+font-family: Lato;
+font-size: 14px;
+letter-spacing: 0.3px;
+margin-right: 9px;
+margin-top: 9px;
+padding: 6px 15px;
+}
+.dropdown > a > span.green:before {
+border-left-color: #2dcb73;
+}
+.status-upload form button > i {
+margin-right: 7px;
+}
+
+.status-upload2 {
+background: none repeat scroll 0 0 #f5f5f5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+float: left;
+width: 850px;
+margin-left: 190px;
+}
+
+.status-upload2 form {
+width: 100%;
+}
+
+.status-upload2 form textarea {
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+-webkit-border-radius: 4px 4px 0 0;
+-moz-border-radius: 4px 4px 0 0;
+-ms-border-radius: 4px 4px 0 0;
+-o-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+color: #777777;
+float: left;
+font-family: Lato;
+font-size: 14px;
+height: 142px;
+letter-spacing: 0.3px;
+padding: 20px;
+width: 100%;
+resize:vertical;
+outline:none;
+border: 1px solid #F2F2F2;
+}
+
+.status-upload2 ul {
+float: left;
+list-style: none outside none;
+margin: 0;
+padding: 0 0 0 15px;
+width: auto;
+}
+.status-upload2 ul > li {
+float: left;
+}
+.status-upload2 ul > li > a {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #777777;
+float: left;
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+margin: 10px 0 10px 10px;
+text-align: center;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+width: 30px;
+cursor: pointer;
+}
+.status-upload2 ul > li > a:hover {
+background: none repeat scroll 0 0 #606060;
+color: #fff;
+}
+.status-upload2 form button {
+border: medium none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #fff;
+float: right;
+font-family: Lato;
+font-size: 14px;
+letter-spacing: 0.3px;
+margin-right: 9px;
+margin-top: 9px;
+padding: 6px 15px;
+}
+.dropdown > a > span.green:before {
+border-left-color: #2dcb73;
+}
+.status-upload2 form button > i {
+margin-right: 7px;
+}
 
