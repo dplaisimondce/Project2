@@ -24,18 +24,11 @@ app.use(methodOverride("_method"));
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+//app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
 
 // Import routes and give the server access to them.
 var routes = require("./controllers/postcontrollers")(app);
-
-// app.listen(port);
-
-
-
-
-
 
 
 
@@ -59,10 +52,13 @@ app.use(passport.initialize());
 
 app.use(passport.session()); 
 //passport views
-app.set('views', './passport/views')
-app.engine('hbs', exphbs({
-    extname: '.hbs'
+app.engine('.hbs', exphbs({
+    extname: '.hbs',
+    defaultLayout: "main",
+    layoutsDir: __dirname+"/views/layouts"
 }));
+app.set("view engine", ".hbs");
+app.set('views',__dirname+"/passport/views")
 
 //Routes
 var authRoute = require('./passport/routes/authroutes.js')(app,passport);
