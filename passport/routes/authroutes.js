@@ -24,7 +24,7 @@ module.exports = function(app, passport) {
  
     app.get('/logout', authController.logout);
  
- 	//redirect on success failure back to sign in
+ 	//post to redirect on success failure back to sign in
     app.post('/signin', passport.authenticate('local-signin', {
             successRedirect: '/dashboard',
  

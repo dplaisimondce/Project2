@@ -36,6 +36,12 @@ db.sequelize.sync({ force: true}).then(function){
 	});
 };
 
+
+
+
+
+
+
 //testing passport
 app.get('/', function(req, res) {
  
@@ -70,14 +76,14 @@ models.sequelize.sync().then(function() {
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
  
 app.use(passport.initialize());
- 
-app.use(passport.session()); // persistent login sessions
+
+
+app.use(passport.session()); 
 //passport views
 app.set('views', './passport/views')
 app.engine('hbs', exphbs({
     extname: '.hbs'
 }));
-app.set('view engine', '.hbs');
 
 //Routes
 var authRoute = require('./passport/routes/authroutes.js')(app,passport);
