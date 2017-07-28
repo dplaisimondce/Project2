@@ -7,6 +7,9 @@ module.exports = function(app, passport) {
  
  
     app.get('/signin', authController.signin);
+
+    //delete maybe?
+    app.get('/profile.hbs', authController.profile);
  
  
     app.post('/signup', passport.authenticate('local-signup', {

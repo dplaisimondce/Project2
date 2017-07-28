@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "Plaisimond2k",
+=======
+    "password": "Mikebobo1@",
+>>>>>>> cfe5a066b5f52d66aa8ec7630ba4c08b3b0086a9
     "database": "post_project",
     "host": "127.0.0.1",
     "dialect": "mysql"

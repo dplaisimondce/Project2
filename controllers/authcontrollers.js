@@ -12,9 +12,13 @@ exports.signin = function(req, res) {
  
  
 exports.dashboard = function(req, res) {
+ 	// console.log(req.user);
+    res.render('dashboard',{'user':req.user});
  
-    res.render('dashboard');
- 
+}
+//take out maybe?
+exports.profile = function(req, res) {
+	res.render('profile.hbs');
 }
 
 exports.logout = function(req,res){

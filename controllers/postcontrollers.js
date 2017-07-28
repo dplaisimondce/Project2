@@ -1,10 +1,18 @@
-var db = require("../models")['Post'];
+var db = require("../models");
 
 
 module.exports = function (app){
-	 // route to get posts
+	 
+app.get("/", function(req, res) {
+    db.Posts.findAll({})
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
+   // route to get posts
   app.get("/api/posts/", function(req, res) {
-    db.Post.findAll({})
+    db.Posts.findAll({})
     .then(function(dbPost) {
       res.json(dbPost);
     });
@@ -13,9 +21,9 @@ module.exports = function (app){
   // route to create posts
   app.post("/api/posts", function(req, res) {
     console.log(req.body);
-    db.Post.create({
-      username: req.body.username,
-      user_post: req.body.user_post,
+    db.Posts.create({
+      userName: req.body.username,
+      userPosts: req.body.user_post,
     })
     .then(function(dbPost) {
       res.json(dbPost);
