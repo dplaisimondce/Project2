@@ -1,25 +1,74 @@
-<div class="jumbotron">
-      <h1 class="text-center">FakeBook</h1>
+<div class='nav1'>
+    <nav class="navbar navbar-light">
+     <a class="navbar-brand" href="#">
+    FakeBook
+  </a>
+</nav>
+</div>
+
+<div id='container'>
+<div class='row'>
+<div class='col-sm-3'>
+<nav class="navbar navbar sidebar" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand1  toggle-btn" href="#">FakeBook Options<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-chevron-down"></span></a>
     </div>
-    <div class="container">
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <p class="cool-font">Name</p>
-          <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
-          <br>
-          <p class="cool-font">Post</p>
-          <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter Chirp Here!"></textarea>
-          <button id="chirp-submit" class="btn btn-lg pull-right">Submit!</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h2>Posts</h2>
-          <hr>
-          <div id="chirp-area"></div>
-        </div>
-      </div>
-
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+        <li ><a href="profile.handlebars">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
+        <li ><a href="#">Log out<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a></li>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
+</div>
+
+<!-- Content Here -->
+ <div class="row">
+    
+    <div class="col-md-6">
+                <div class="widget-area no-padding blank">
+                <div class="status-upload">
+                  <form>
+                    <textarea placeholder="What are you doing right now?" ></textarea>
+                    <ul>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="glyphicon glyphicon-volume-up"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="glyphicon glyphicon-film"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Direct Messages"><i class="glyphicon glyphicon-envelope"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="glyphicon glyphicon-camera"></i></a></li>
+                    </ul>
+                    <button type="submit" method='post' action='post' class="btn btn-success"><i class="fa fa-share"></i> Post</button>
+                  </form>
+                </div><!-- Status Upload  -->
+              </div><!-- Widget Area -->
+            </div>
+        
+    </div>
+
+
+
+<div class='find-friends'>
+<div class='col-sm-3'>
+  <div class="socialBar">
+      <a href="#" title="Facebook"><i class="ico FbIcon"><img src="http://i224.photobucket.com/albums/dd65/etaguile/Facebook_zpsjtffnhpc.png"></i></a>
+      <a href="#" title="Instagram"><i class="ico IgIcon"><img src="http://www.marknewtonband.com/wp-content/uploads/2016/09/adver-marknewtonband-1.png"></i></a>
+    </div>  
+</div>
+</div>
+</div>
+
+<div class='results-div'>
+</div>
+
+</div>

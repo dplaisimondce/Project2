@@ -1,57 +1,600 @@
 body {
-	background-color: #eee!important;
+  background-color: #e9ebee!important;
 }
 
-.left-nav {
-	position: relative;
-	top: 0px;
-	width: 10%;
-	background-color: #eee;
+.navbar-brand {
+  margin-top: 0px!important;
+  color: white!important;
 }
 
-
-.jumbotron {
-	background-color: #3b5998!important;
-	height: 160px;
-	color: blue;
+.navbar.navbar {
+  background-color: #3b5998;
 }
 
-.text-center {
-	margin-top: 0px;
-	color: white!important;
+.navbar.sidebar {
+  background-color: #e9ebee;
+}
+body,html{
+      height: 100%;
+  }
+
+  /* remove outer padding */
+  .main .row{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  /*Remove rounded coners*/
+
+  nav.sidebar.navbar {
+    border-radius: 0px;
+  }
+
+  nav.sidebar, .main{
+    -webkit-transition: margin 200ms ease-out;
+      -moz-transition: margin 200ms ease-out;
+      -o-transition: margin 200ms ease-out;
+      transition: margin 200ms ease-out;
+  }
+
+  /* Add gap to nav and right windows.*/
+  .main{
+    padding: 10px 10px 0 10px;
+  }
+
+  /* .....NavBar: Icon only with coloring/layout.....*/
+
+  /*small/medium side display*/
+  @media (min-width: 768px) {
+
+    /*Allow main to be next to Nav*/
+    .main{
+      position: absolute;
+      width: calc(100% - 40px); /*keeps 100% minus nav size*/
+      margin-left: 40px;
+      float: right;
+    }
+
+    /*Center Brand*/
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+      margin-left: 0px;
+    }
+    /*Center Brand*/
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+
+    /*Center Icons*/
+    nav.sidebar a{
+      padding-right: 13px;
+    }
+
+    /*adds border top to first nav box */
+    nav.sidebar .navbar-nav > li:first-child{
+      border-top: 1px #e5e5e5 solid;
+    }
+
+    /*adds border to bottom nav boxes*/
+    nav.sidebar .navbar-nav > li{
+      border-bottom: 1px #e5e5e5 solid;
+    }
+
+    /* Colors/style dropdown box*/
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    /*allows nav box to use 100% width*/
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+      padding: 0 0px 0 0px;
+    }
+
+    /*colors dropdown box text */
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+      color: #777;
+    }
+
+    /*gives sidebar width/height*/
+    nav.sidebar{
+      width: 200px;
+      height: 100%;
+      margin-left: -160px;
+      float: left;
+      z-index: 8000;
+      margin-bottom: 0px;
+    }
+
+    /*give sidebar 100% width;*/
+    nav.sidebar li {
+      width: 100%;
+    }
+
+    nav.sidebar{
+      margin-left: 0px;
+      float: left;
+    }
+    /*Show hidden items on nav*/
+    nav.sidebar .forAnimate{
+      opacity: 1;
+    }
+  }
+
+  nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: #e9ebee!important;
+  }
+
+  nav:hover .forAnimate{
+    opacity: 1;
+  }
+  section{
+    padding-left: 15px;
+  }
+  }
+
+  /* .....NavBar: Fully showing nav bar..... */
+
+  @media (min-width: 1330px) {
+
+    /*Allow main to be next to Nav*/
+    .main{
+      width: calc(100% - 200px); /*keeps 100% minus nav size*/
+      margin-left: 200px;
+    }
+
+    /*Show all nav*/
+    nav.sidebar{
+      margin-left: 0px;
+      float: left;
+    }
+    /*Show hidden items on nav*/
+    nav.sidebar .forAnimate{
+      opacity: 1;
+    }
+  }
+
+  nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: #e9ebee!important;
+  }
+
+  nav:hover .forAnimate{
+    opacity: 1;
+  }
+  section{
+    padding-left: 15px;
+  }
+
+textarea.form-control2 {
+  width: 820px;
+  margin: auto;
+  margin-left: 40px;
+}
+
+textarea.form-control {
+  width: 300px;
+}
+
+.main {
+  background-color: white;
+  width: 33%;
+  height: 150px;
+  border: solid;
+  margin-left: 290px;
+  margin-top: 20px;
+  border-width: 1px 
+}
+
+.main2 {
+  width: 70%;
+  margin-left: 180px;
+
 }
 
 .form-group {
-	width: 40%;
+  position: relative;
+  display: block;
 }
 
-.chirp {
-  padding: 10px;
-  margin: 10px;
-  background-color: #e8f9ff;
+.form-group2 {
+  position: relative;
+  display: block;
+  text-align: center;
 }
 
-.cool-font {
+#btn2 {
+  
+}
+
+.btn-success {
+  margin-top: 60px;
+  color: #e9ebee!important;
+}
+
+form.form-inline {
+  margin-left: 200px;
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 6px;
+  color: white;
+  background-color: #3b5998;
+}
+
+nav.sidebar.navbar {
+  height: 200px;
+}
+
+.find-friends {
+  
+    
+}
+
+h4 {
+  text-align: center;
+  color: grey!important;
+}
+
+.fb-profile-block {
+  margin: auto;
+  position: relative;
+  width: 850px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.fb-profile-block-thumb{
+  display: block;
+  height: 315px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+}
+.fb-profile-block-menu {
+  border: 1px solid #d3d6db;
+  border-radius: 0 0 3px 3px;
+}
+.profile-img a{
+  bottom: 15px;
+  box-shadow: none;
+  display: block;
+  left: 15px;
+  padding:1px;
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+  z-index:9;
+}
+.profile-img img {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  height:158px;
+  padding: 5px;
+  width:158px;
+}
+.profile-name {
+  bottom: 60px;
+  left: 205px;
+  position: absolute;
+}
+.profile-name h2 {
+  color: #fff;
   font-size: 24px;
-  color: #1da1f2;
+  font-weight: 600;
+  line-height: 30px;
+  max-width: 275px;
+  position: relative;
+  text-transform: uppercase;
+}
+.fb-profile-block-menu{
+  height: 44px;
+  position: relative;
+  width:850px;
+  overflow:hidden;
+  }
+.block-menu {
+  clear: right;
+  padding-left: 205px;
+}
+.block-menu ul{
+  margin:0;
+  padding:0;
+  }
+.block-menu ul li{
+  display:inline-block;
+  }
+.block-menu ul li a {
+  border-right: 1px solid #e9eaed;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  height: 42px;
+  line-height: 3.0;
+  padding: 0 17px;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  color:#4b4f56;
+  text-transform:capitalize;
+}
+.block-menu ul li:first-child a{
+    border-left: 1px solid #e9eaed;
+  }
+
+body { /*JUST FOR TEST, YOU CAN REMOVE IT*/
+  background-color: #A6A6A6;
 }
 
-
-input,
-textarea {
-  margin: 20px;
+.socialBar { /*JUST FOR POSITIONING THE SOCIAL DIV: CENTERED RIGHT*/
+  position: fixed;
+  right: 0px; /*THIS WILL TAKE YOU A MARGIN FROM RIGHT*/
+  top: 50%; /*CENTER THE DIV, DO NOT EDIT*/
+  transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  -webkit-transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  -moz-transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  -o-transform: translate(0%, -50%); /*CENTER THE DIV, DO NOT EDIT*/
+  background-color: #e9ebee; /*WHATEVER COLOR THAT YOU WANT*/
+  height: 580px;
+  width: 17%;
+}
+.socialBar .ico {
+  display: block; /*VERTICAL POSITION*/
+  padding: 8px; /*DO NOT EDIT, MAINTAINS THE CORRECT SIZE FOR BACKGROUND COLOR*/
+}
+.socialBar:hover .ico {  /*JUST ANIMATION, YOU CAN REMOVE IT IF YOU WANT A FAST COLOR CHANGE*/
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.socialBar .FbIcon:hover { /*THIS MAKES A COLOR CHANGE*/
+  background-color: #3B5998;
+  margin-top: 25px;
+}
+.socialBar .IgIcon:hover {
+  background-color: #3B5998;
 }
 
-.btn {
-  margin: 10px;
-  color: #1da1f2;
-  background-color: white;
-  border-color: #1da1f2;
-  border-style: solid;
-  border-width: 2px;
+.socialBar .IgIcon {
+  height: 240px;
+  width: 240px;
 }
 
-p {
-  margin: 0;
-  font-size: 16px;
+body{ background: #fafafa;}
+.widget-area.blank {
+background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+-ms-box-shadow: none;
+-o-box-shadow: none;
+box-shadow: none;
 }
+body .no-padding {
+padding: 0;
+}
+.widget-area {
+background-color: #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-ms-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+-o-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+float: left;
+margin-top: 30px;
+padding: 25px 30px;
+position: relative;
+width: 100%;
+}
+
+.status-upload {
+background: none repeat scroll 0 0 #f5f5f5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+float: left;
+width: 100%;
+}
+
+.status-upload form {
+float: left;
+width: 100%;
+}
+
+.status-upload form textarea {
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+-webkit-border-radius: 4px 4px 0 0;
+-moz-border-radius: 4px 4px 0 0;
+-ms-border-radius: 4px 4px 0 0;
+-o-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+color: #777777;
+float: left;
+font-family: Lato;
+font-size: 14px;
+height: 142px;
+letter-spacing: 0.3px;
+padding: 20px;
+width: 100%;
+resize:vertical;
+outline:none;
+border: 1px solid #F2F2F2;
+}
+
+.status-upload ul {
+float: left;
+list-style: none outside none;
+margin: 0;
+padding: 0 0 0 15px;
+width: auto;
+}
+.status-upload ul > li {
+float: left;
+}
+.status-upload ul > li > a {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #777777;
+float: left;
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+margin: 10px 0 10px 10px;
+text-align: center;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+width: 30px;
+cursor: pointer;
+}
+.status-upload ul > li > a:hover {
+background: none repeat scroll 0 0 #606060;
+color: #fff;
+}
+.status-upload form button {
+border: medium none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #fff;
+float: right;
+font-family: Lato;
+font-size: 14px;
+letter-spacing: 0.3px;
+margin-right: 9px;
+margin-top: 9px;
+padding: 6px 15px;
+}
+.dropdown > a > span.green:before {
+border-left-color: #2dcb73;
+}
+.status-upload form button > i {
+margin-right: 7px;
+}
+
+.status-upload2 {
+background: none repeat scroll 0 0 #f5f5f5;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+float: left;
+width: 850px;
+margin-left: 190px;
+display: block;
+}
+
+.status-upload2 form {
+width: 100%;
+}
+
+.status-upload2 form textarea {
+background: none repeat scroll 0 0 #fff;
+border: medium none;
+-webkit-border-radius: 4px 4px 0 0;
+-moz-border-radius: 4px 4px 0 0;
+-ms-border-radius: 4px 4px 0 0;
+-o-border-radius: 4px 4px 0 0;
+border-radius: 4px 4px 0 0;
+color: #777777;
+float: left;
+font-family: Lato;
+font-size: 14px;
+height: 142px;
+letter-spacing: 0.3px;
+padding: 20px;
+width: 100%;
+resize:vertical;
+outline:none;
+border: 1px solid #F2F2F2;
+}
+
+.status-upload2 ul {
+float: left;
+list-style: none outside none;
+margin: 0;
+padding: 0 0 0 15px;
+width: auto;
+}
+.status-upload2 ul > li {
+float: left;
+}
+.status-upload2 ul > li > a {
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #777777;
+float: left;
+font-size: 14px;
+height: 30px;
+line-height: 30px;
+margin: 10px 0 10px 10px;
+text-align: center;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-ms-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+width: 30px;
+cursor: pointer;
+}
+.status-upload2 ul > li > a:hover {
+background: none repeat scroll 0 0 #606060;
+color: #fff;
+}
+.status-upload2 form button {
+border: medium none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+color: #fff;
+float: right;
+font-family: Lato;
+font-size: 14px;
+letter-spacing: 0.3px;
+margin-right: 9px;
+margin-top: 9px;
+padding: 6px 15px;
+}
+.dropdown > a > span.green:before {
+border-left-color: #2dcb73;
+}
+.status-upload2 form button > i {
+margin-right: 7px;
+}
+
