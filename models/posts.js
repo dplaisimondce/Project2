@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     userPosts:{
-      type:DataTypes.STRING,
+      type:DataTypes.TEXT,
       allowNull:false,
       validate:{
         len:[1,255]
@@ -18,6 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        //Posts.belongsTo(models.User);
       }
     }
   });
