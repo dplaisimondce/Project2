@@ -1,18 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   var Posts = sequelize.define('Posts', {
     userName: {
-      type:DataTypes.STRING,
+      type:DataTypes.INTEGER,
       allowNull: false,
-      validate:{
-        len:[1,20]
-      }
     },
     userPosts:{
       type:DataTypes.TEXT,
       allowNull:false,
-      validate:{
-        len:[1,255]
-      }
     }
   }, {
     classMethods: {
