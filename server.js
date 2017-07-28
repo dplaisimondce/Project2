@@ -21,8 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
-// Set Handlebars.
-var exphbs = require("express-handlebars");
 
 //app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 
@@ -36,7 +34,7 @@ var routes = require("./controllers/postcontrollers")(app);
 //testing passport
 app.get('/', function(req, res) {
  
-    res.send('passport is working');
+    res.send('index.html');
  
 });
  
