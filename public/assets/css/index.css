@@ -480,6 +480,11 @@ xsigin/signup popup
   white-space: nowrap;
   overflow: hidden;
 }
+.post-box{
+  width:500px;
+  background-color: white;
+  
+}
 @media only screen and (min-width: 1170px) {
   .cd-close-form {
     display: none;

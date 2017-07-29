@@ -26,7 +26,7 @@ app.get("/", function(req, res) {
       userPosts: req.body.user_post,
     })
     .then(function(dbPost) {
-      res.json(dbPost);
+      res.redirect('/dashboard');
     });
   });
 

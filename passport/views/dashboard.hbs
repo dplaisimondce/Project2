@@ -54,6 +54,14 @@
                     <button type="submit" id='post-submit' class="btn btn-success"><i class="fa fa-share"></i> Post</button>
                   </form>
                 </div><!-- Status Upload  -->
+                <div id="post-results">
+                 {{#each postsReturn}}
+                 
+                  <div class="post-box">
+                  <h4>{{this.userName}} : {{this.userPosts}}</h4>
+                  </div >
+                {{/each}}
+                </div>                                    
               </div><!-- Widget Area -->
             </div>
         
@@ -73,9 +81,9 @@
 
 <div class='results-div'>
  <form action="/8?_method=PUT" method="POST">
-        </form>
-</div>
+</form>
 
+</div>
 </div>
 
 <footer>@Copyright 2017 FakeBook</footer>

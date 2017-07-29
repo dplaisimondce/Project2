@@ -1,3 +1,5 @@
+var db = require("../models");
+
 exports.signup = function(req, res) {
  
     res.render('signup');
@@ -12,9 +14,20 @@ exports.signin = function(req, res) {
  
  
 exports.dashboard = function(req, res) {
- 	// console.log(req.user);
-    res.render('dashboard',{'user':req.user});
- 
+
+    db.Posts.findAll().then(function(data){
+    	var posts = data.map(function(item, index){
+    		return item.dataValues;
+    	  });
+
+    	var postObj = {
+    		'user': req.user,
+    		'postsReturn': posts
+    	}
+    	console.log(postObj.postsReturn);
+    	  
+          res.render('dashboard', postObj);
+    });
 }
 //take out maybe?
 exports.profile = function(req, res) {
